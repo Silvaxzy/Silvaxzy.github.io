@@ -137,6 +137,13 @@ export const experiencias: Experiencia[] = [
 // Deixe a lista vazia para esconder a seção.
 // Exemplo de item:
 // { nome: "Python Essentials 1", instituicao: "Cisco", ano: "2026", link: "https://..." }
-export type Certificacao = { nome: string; instituicao: string; ano: string; link?: string };
+export type Certificacao = { nome: string; instituicao: string; ano: string; imagem?: string; link?: string };
 
-export const certificacoes: Certificacao[] = [];
+export const certificacoes: Certificacao[] = [
+  {
+    nome: "Competências Digitais Essenciais e Inteligência Artificial para o Sucesso Acadêmico (84h)",
+    instituicao: "UNICID",
+    ano: "2026",
+        imagem: "/projetos/certificados/competencias-digitais-ia.jpg",
+  },
+];
