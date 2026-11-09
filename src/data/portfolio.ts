@@ -55,8 +55,9 @@ export const projetos: Projeto[] = [
       "Aplicação Full Stack de finanças pessoais integrada ao Open Finance (API da Pluggy): importa o histórico bancário, gera análises dos últimos 12 meses, projeção de gastos, insights automáticos e orçamento por categoria.",
     categoria: "Full Stack",
     tecnologias: ["Python", "Flask", "SQLite", "API REST", "Open Finance", "JavaScript", "Chart.js"],
-    imagem: "/projetos/gerenciador-financas.png",
+       imagem: "/projetos/gerenciador-financas.png",
     github: "https://github.com/Silvaxzy/gerenciador-financas",
+    demo: "https://gerenciador-financas-v9hh.onrender.com",
     destaque: true,
   },
 ];
