@@ -50,11 +50,11 @@ export type Projeto = {
 
 export const projetos: Projeto[] = [
   {
-    nome: "Gerenciador de Finanças",
+        nome: "Gerenciador de Finanças 2.0",
     descricao:
-      "Aplicação web para controle de finanças pessoais. O usuário cria uma conta, faz login e registra receitas e despesas, acompanhando saldo e gastos por categoria em um painel que atualiza sem recarregar a página.",
+      "Aplicação Full Stack de finanças pessoais integrada ao Open Finance (API da Pluggy): importa o histórico bancário, gera análises dos últimos 12 meses, projeção de gastos, insights automáticos e orçamento por categoria.",
     categoria: "Full Stack",
-    tecnologias: ["Python", "Flask", "SQLite", "JavaScript", "Chart.js", "HTML", "CSS"],
+    tecnologias: ["Python", "Flask", "SQLite", "API REST", "Open Finance", "JavaScript", "Chart.js"],
     imagem: "/projetos/gerenciador-financas.png",
     github: "https://github.com/Silvaxzy/gerenciador-financas",
     destaque: true,
