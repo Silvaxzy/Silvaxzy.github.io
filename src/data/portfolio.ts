@@ -40,7 +40,7 @@ export const formacao = {
 export type Projeto = {
   nome: string;
   descricao: string;
-  categoria: "Full Stack" | "Back-end" | "Front-end";
+  categoria: "Full Stack" | "Back-end" | "Front-end" | "Inteligência Artificial";
   tecnologias: string[];
   imagem: string;
   github?: string;
@@ -50,12 +50,23 @@ export type Projeto = {
 
 export const projetos: Projeto[] = [
   {
-        nome: "Gerenciador de Finanças 2.0",
+    nome: "LumIA",
+    descricao:
+      "Converse com qualquer documento usando IA. Envie um PDF e pergunte o que quiser: a LumIA usa RAG (embeddings + busca semântica) e a API do Google Gemini para responder só com base no documento, citando a página e o trecho de cada informação.",
+    categoria: "Inteligência Artificial",
+    tecnologias: ["Python", "Flask", "Gemini API", "RAG", "NumPy", "JavaScript", "HTML", "CSS"],
+    imagem: "/projetos/lumia.png",
+    github: "https://github.com/Silvaxzy/lumia",
+    demo: "https://lumia-njq6.onrender.com",
+    destaque: true,
+  },
+  {
+    nome: "Gerenciador de Finanças 2.0",
     descricao:
       "Aplicação Full Stack de finanças pessoais integrada ao Open Finance (API da Pluggy): importa o histórico bancário, gera análises dos últimos 12 meses, projeção de gastos, insights automáticos e orçamento por categoria.",
     categoria: "Full Stack",
     tecnologias: ["Python", "Flask", "SQLite", "API REST", "Open Finance", "JavaScript", "Chart.js"],
-       imagem: "/projetos/gerenciador-financas.png",
+    imagem: "/projetos/gerenciador-financas.png",
     github: "https://github.com/Silvaxzy/gerenciador-financas",
     demo: "https://gerenciador-financas-v9hh.onrender.com",
     destaque: true,
@@ -140,7 +151,12 @@ export const experiencias: Experiencia[] = [
 // { nome: "Python Essentials 1", instituicao: "Cisco", ano: "2026", link: "https://..." }
 export type Certificacao = { nome: string; instituicao: string; ano: string; imagem?: string; link?: string };
 
-export const certificacoes: Certificacao[] = [
+export const certificacoes: Certificacao[] = [  {
+    nome: "Imersão Engenharia de Software: Dev na Era da IA (4h)",
+    instituicao: "Alura + Google for Startups",
+    ano: "2026",
+    imagem: "/projetos/certificados/imersao-dev-era-ia.jpg",
+  },
   {
     nome: "Competências Digitais Essenciais e Inteligência Artificial para o Sucesso Acadêmico (84h)",
     instituicao: "UNICID",
