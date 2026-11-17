@@ -5,7 +5,7 @@
 
 export const perfil = {
   nome: "Bruno Silva",
-  nomeCompleto: "Bruno Vanderley Thomé da Silva",
+  nomeCompleto: "Bruno Silva",
   iniciais: "BS",
   cargo: "Desenvolvedor Full Stack em formação",
   stack: "Python · Flask · JavaScript",
@@ -35,6 +35,14 @@ export const formacao = {
   instituicao: "UNICID – Universidade Cidade de São Paulo",
   periodo: "ago. 2026 – 2029 (previsão)",
 };
+
+// Áreas que aparecem na seção "Sobre mim"
+export const competencias = [
+  { titulo: "Back-end", texto: "Python, Flask e APIs REST com rotas protegidas." },
+  { titulo: "Front-end", texto: "Interfaces responsivas com HTML, CSS e JavaScript." },
+  { titulo: "Banco de dados", texto: "Modelagem e consultas SQL com SQLite." },
+  { titulo: "Versionamento", texto: "Git e GitHub com commits organizados." },
+];
 
 // ---------------- Projetos ----------------
 export type Projeto = {
@@ -151,7 +159,8 @@ export const experiencias: Experiencia[] = [
 // { nome: "Python Essentials 1", instituicao: "Cisco", ano: "2026", link: "https://..." }
 export type Certificacao = { nome: string; instituicao: string; ano: string; imagem?: string; link?: string };
 
-export const certificacoes: Certificacao[] = [  {
+export const certificacoes: Certificacao[] = [
+  {
     nome: "Imersão Engenharia de Software: Dev na Era da IA (4h)",
     instituicao: "Alura + Google for Startups",
     ano: "2026",
@@ -161,6 +170,6 @@ export const certificacoes: Certificacao[] = [  {
     nome: "Competências Digitais Essenciais e Inteligência Artificial para o Sucesso Acadêmico (84h)",
     instituicao: "UNICID",
     ano: "2026",
-        imagem: "/projetos/certificados/competencias-digitais-ia.jpg",
+    imagem: "/projetos/certificados/competencias-digitais-ia.jpg",
   },
 ];

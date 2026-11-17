@@ -1,0 +1,169 @@
+.contato {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(80px, 11vw, 144px);
+  background:
+    radial-gradient(60% 50% at 0% 100%, rgba(10, 91, 255, 0.18), transparent 70%),
+    var(--noite);
+  border-top: 1px solid var(--linha);
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+  gap: clamp(32px, 6vw, 80px);
+  margin-top: clamp(48px, 7vw, 80px);
+}
+
+.canais {
+  list-style: none;
+  border-top: 1px solid var(--linha);
+}
+
+.canal {
+  position: relative;
+  display: grid;
+  grid-template-columns: auto 1fr auto;
+  grid-template-areas:
+    "icone nome seta"
+    "icone valor seta";
+  column-gap: var(--e-4);
+  align-items: center;
+  padding: var(--e-5) var(--e-2);
+  border-bottom: 1px solid var(--linha);
+  overflow: hidden;
+}
+
+/* faixa azul que varre a linha no hover */
+.canal::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(10, 91, 255, 0.16), transparent);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.5s var(--curva);
+  z-index: -1;
+}
+
+.canal:hover::before,
+.canal:focus-visible::before {
+  transform: scaleX(1);
+}
+
+.iconeCanal {
+  grid-area: icone;
+  width: 26px;
+  height: 26px;
+  color: var(--azul-claro);
+}
+
+.canalNome {
+  grid-area: nome;
+  font-size: 0.82rem;
+  color: var(--nevoa);
+}
+
+.canalValor {
+  grid-area: valor;
+  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-weight: 550;
+  letter-spacing: -0.02em;
+  word-break: break-word;
+}
+
+.seta {
+  grid-area: seta;
+  width: 22px;
+  height: 22px;
+  color: var(--nevoa);
+  transition: transform 0.4s var(--curva), color 0.3s;
+}
+
+.canal:hover .seta {
+  transform: translate(3px, -3px);
+  color: var(--eletrico);
+}
+
+.form {
+  display: grid;
+  gap: var(--e-4);
+  align-content: start;
+  padding: clamp(20px, 3vw, 32px);
+  border-radius: var(--r-g);
+  border: 1px solid var(--linha);
+  background: linear-gradient(180deg, rgba(14, 22, 44, 0.6), rgba(6, 10, 22, 0.6));
+}
+
+.campos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--e-4);
+}
+
+.form label {
+  display: grid;
+  gap: 6px;
+  font-size: 0.85rem;
+  color: var(--nevoa);
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: var(--r-p);
+  border: 1px solid var(--linha);
+  background: rgba(0, 0, 0, 0.45);
+  color: var(--neve);
+  font: inherit;
+  font-size: 1rem;
+  resize: vertical;
+  transition: border-color 0.25s, box-shadow 0.25s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  outline: none;
+  border-color: var(--azul-claro);
+  box-shadow: 0 0 0 3px rgba(10, 91, 255, 0.25);
+}
+
+.enviar {
+  justify-self: start;
+  min-height: 50px;
+  padding: 0 26px;
+  border-radius: 99px;
+  background: var(--azul);
+  color: #fff;
+  font-weight: 600;
+  transition: box-shadow 0.3s, transform 0.3s var(--curva);
+}
+
+.enviar:hover:not(:disabled) {
+  box-shadow: 0 0 32px rgba(10, 91, 255, 0.7);
+  transform: translateY(-2px);
+}
+
+.enviar:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+.retorno {
+  min-height: 1.4em;
+  font-size: 0.9rem;
+  color: var(--eletrico);
+}
+
+@media (max-width: 900px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  .campos {
+    grid-template-columns: 1fr;
+  }
+}

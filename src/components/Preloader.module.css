@@ -1,0 +1,62 @@
+.loader {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: grid;
+  place-items: center;
+  background: var(--preto);
+  clip-path: inset(0% 0% 0% 0%);
+}
+
+.marca {
+  font-size: clamp(4rem, 17vw, 15rem);
+  font-weight: 700;
+  line-height: 0.86;
+  letter-spacing: -0.06em;
+  text-align: center;
+  color: transparent;
+  -webkit-text-stroke: 1px rgba(157, 187, 255, 0.28);
+  user-select: none;
+}
+
+.info {
+  position: absolute;
+  left: var(--margem);
+  right: var(--margem);
+  bottom: clamp(28px, 6vh, 56px);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: var(--nevoa);
+}
+
+.legenda {
+  font-size: 0.85rem;
+}
+
+.numero {
+  font-size: clamp(2.5rem, 7vw, 5rem);
+  font-weight: 600;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  color: var(--neve);
+  font-variant-numeric: tabular-nums;
+}
+
+.trilho {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: var(--linha);
+}
+
+.progresso {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, var(--azul), var(--eletrico));
+  transform: scaleX(0);
+  transform-origin: left;
+  box-shadow: 0 0 18px var(--azul);
+}

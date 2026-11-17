@@ -1,0 +1,40 @@
+/* Paleta do portfólio original: preto profundo, azul elétrico e névoa azulada. */
+:root {
+  --preto: #000000;
+  --noite: #04060c;
+  --painel: #070b16;
+  --painel-2: #0b1222;
+  --linha: rgba(110, 150, 255, 0.14);
+  --linha-forte: rgba(110, 150, 255, 0.32);
+  --azul: #0a5bff;
+  --azul-claro: #3d7dff;
+  --eletrico: #00b3ff;
+  --nevoa: #9aa8c4;
+  --neve: #eef3ff;
+
+  --gradiente-texto: linear-gradient(100deg, #ffffff 0%, #9dbbff 40%, #0a5bff 75%, #00b3ff 100%);
+  --brilho: 0 0 0 1px rgba(10, 91, 255, 0.45), 0 0 32px -6px rgba(10, 91, 255, 0.75);
+
+  --fonte: "Geist", "Inter", ui-sans-serif, system-ui, sans-serif;
+
+  /* escala de espaçamento */
+  --e-1: 4px;
+  --e-2: 8px;
+  --e-3: 12px;
+  --e-4: 16px;
+  --e-5: 24px;
+  --e-6: 32px;
+  --e-7: 48px;
+  --e-8: 64px;
+  --e-9: 96px;
+  --e-10: 144px;
+
+  /* três raios: pequeno (chips/botões), médio (cards), grande (painéis) */
+  --r-p: 10px;
+  --r-m: 18px;
+  --r-g: 28px;
+
+  --largura: 1200px;
+  --margem: clamp(20px, 5vw, 56px);
+  --curva: cubic-bezier(0.22, 1, 0.36, 1);
+}

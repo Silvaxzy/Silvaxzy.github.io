@@ -1,0 +1,131 @@
+.habilidades {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(80px, 11vw, 144px);
+  background: var(--noite);
+}
+
+.aneis {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--e-4);
+  margin-top: clamp(48px, 7vw, 88px);
+  list-style: none;
+}
+
+.anelItem {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: var(--e-3);
+  padding: var(--e-6) var(--e-4);
+  border-radius: var(--r-g);
+  border: 1px solid var(--linha);
+  background: radial-gradient(80% 60% at 50% 30%, rgba(10, 91, 255, 0.12), transparent 70%), var(--painel);
+}
+
+.anelSvg {
+  width: 100%;
+  transform: rotate(-90deg);
+  overflow: visible;
+}
+
+.trilho {
+  fill: none;
+  stroke: rgba(110, 150, 255, 0.12);
+  stroke-width: 6;
+}
+
+.anel {
+  fill: none;
+  stroke: var(--azul-claro);
+  stroke-width: 6;
+  stroke-linecap: round;
+  filter: drop-shadow(0 0 6px rgba(0, 179, 255, 0.6));
+}
+
+.anelCaixa {
+  position: relative;
+  width: min(150px, 100%);
+}
+
+.valor {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
+  font-weight: 650;
+  letter-spacing: -0.04em;
+  font-variant-numeric: tabular-nums;
+}
+
+.anelNome {
+  font-weight: 600;
+}
+
+.grupos {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--e-4);
+  margin-top: var(--e-4);
+}
+
+.grupo {
+  padding: var(--e-6);
+  border-radius: var(--r-g);
+  border: 1px solid var(--linha);
+  background: linear-gradient(180deg, rgba(14, 22, 44, 0.55), rgba(6, 10, 22, 0.55));
+}
+
+.grupo h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: var(--e-5);
+}
+
+.grupo ul {
+  display: grid;
+  gap: var(--e-5);
+  list-style: none;
+}
+
+.linhaItem {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.porcentagem {
+  color: var(--nevoa);
+  font-variant-numeric: tabular-nums;
+}
+
+.trilhoBarra {
+  position: relative;
+  display: block;
+  height: 6px;
+  margin-top: var(--e-2);
+  border-radius: 99px;
+  background: rgba(110, 150, 255, 0.1);
+  overflow: hidden;
+}
+
+.barra {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--azul), var(--eletrico));
+  transform-origin: left;
+  box-shadow: 0 0 12px rgba(0, 179, 255, 0.5);
+}
+
+@media (max-width: 960px) {
+  .aneis {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grupos {
+    grid-template-columns: 1fr;
+  }
+}

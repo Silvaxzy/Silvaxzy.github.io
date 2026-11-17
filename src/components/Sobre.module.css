@@ -1,0 +1,209 @@
+.sobre {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(96px, 14vw, 168px) clamp(80px, 10vw, 128px);
+  background:
+    radial-gradient(60% 40% at 85% 0%, rgba(10, 91, 255, 0.14), transparent 70%),
+    var(--noite);
+  border-top: 1px solid var(--linha);
+  border-radius: var(--r-g) var(--r-g) 0 0;
+  box-shadow: 0 -40px 80px -20px rgba(0, 0, 0, 0.9);
+}
+
+/* pull-up: o capítulo sobe por cima do hero enquanto ele está fixado */
+:global(html[data-pin="ativo"]) .sobre {
+  margin-top: -100vh;
+}
+
+.grade {
+  display: grid;
+  grid-template-columns: minmax(0, 0.85fr) minmax(0, 1.15fr);
+  gap: clamp(32px, 6vw, 88px);
+  align-items: start;
+  margin-top: clamp(48px, 7vw, 88px);
+}
+
+.moldura {
+  position: relative;
+  margin-top: var(--e-7);
+}
+
+.moldura::before {
+  content: "";
+  position: absolute;
+  inset: -16px;
+  border-radius: calc(var(--r-g) + 12px);
+  background: linear-gradient(140deg, rgba(10, 91, 255, 0.5), transparent 45%, rgba(0, 179, 255, 0.35));
+  filter: blur(28px);
+  opacity: 0.6;
+  z-index: -1;
+}
+
+.fotoJanela {
+  overflow: hidden;
+  aspect-ratio: 4 / 5;
+  border-radius: var(--r-g);
+  border: 1px solid var(--linha-forte);
+  background: linear-gradient(140deg, rgba(10, 91, 255, 0.3), var(--noite));
+}
+
+.fotoJanela img,
+.iniciais {
+  width: 100%;
+  height: 116%;
+  margin-top: -8%;
+  object-fit: cover;
+}
+
+.iniciais {
+  display: grid;
+  place-items: center;
+  font-size: 6rem;
+  font-weight: 700;
+}
+
+.legenda {
+  position: absolute;
+  left: 16px;
+  right: 16px;
+  bottom: 16px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 16px;
+  border-radius: var(--r-m);
+  background: rgba(4, 6, 12, 0.72);
+  border: 1px solid var(--linha);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  font-size: 0.82rem;
+  color: var(--nevoa);
+}
+
+.legendaNome {
+  color: var(--neve);
+  font-weight: 600;
+}
+
+.texto {
+  display: grid;
+  gap: var(--e-5);
+  color: var(--nevoa);
+}
+
+.destaque {
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  line-height: 1.4;
+  letter-spacing: -0.02em;
+  color: var(--neve);
+}
+
+.fatos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--e-5);
+  margin-top: var(--e-4);
+  padding-top: var(--e-6);
+  border-top: 1px solid var(--linha);
+}
+
+.fatos dt {
+  font-size: 0.82rem;
+  color: var(--azul-claro);
+  margin-bottom: var(--e-2);
+}
+
+.fatos dd {
+  color: var(--neve);
+}
+
+.fatoSub {
+  margin-top: 2px;
+  font-size: 0.88rem;
+  color: var(--nevoa) !important;
+}
+
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--e-2);
+  list-style: none;
+}
+
+.chips li {
+  padding: 5px 12px;
+  border-radius: 99px;
+  border: 1px solid var(--linha);
+  font-size: 0.85rem;
+}
+
+.competencias {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: var(--e-4);
+  margin-top: clamp(64px, 9vw, 112px);
+  list-style: none;
+}
+
+.competencia {
+  position: relative;
+  padding: var(--e-5);
+  border-radius: var(--r-m);
+  border: 1px solid var(--linha);
+  background: linear-gradient(180deg, rgba(14, 22, 44, 0.6), rgba(6, 10, 22, 0.6));
+  transition: border-color 0.35s, transform 0.35s var(--curva), box-shadow 0.35s;
+}
+
+.competencia:hover {
+  border-color: var(--linha-forte);
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -24px rgba(10, 91, 255, 0.7);
+}
+
+.marcador {
+  display: block;
+  width: 28px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--azul), var(--eletrico));
+  transition: width 0.4s var(--curva);
+}
+
+.competencia:hover .marcador {
+  width: 56px;
+}
+
+.competencia h3 {
+  margin-top: var(--e-6);
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+.competencia p {
+  margin-top: var(--e-2);
+  font-size: 0.92rem;
+  color: var(--nevoa);
+}
+
+@media (max-width: 960px) {
+  .grade {
+    grid-template-columns: 1fr;
+  }
+  .moldura {
+    max-width: 420px;
+    margin-top: 0;
+  }
+  .competencias {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 560px) {
+  .fatos,
+  .competencias {
+    grid-template-columns: 1fr;
+  }
+  .sobre {
+    border-radius: var(--r-m) var(--r-m) 0 0;
+  }
+}

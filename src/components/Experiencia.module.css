@@ -1,0 +1,134 @@
+.experiencia {
+  position: relative;
+  z-index: 2;
+  padding-block: clamp(80px, 11vw, 144px);
+  background: linear-gradient(180deg, var(--noite), var(--preto));
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: minmax(0, 0.9fr) minmax(0, 1.1fr);
+  gap: clamp(40px, 7vw, 96px);
+  align-items: start;
+}
+
+.lateral {
+  position: sticky;
+  top: 120px;
+}
+
+.linhaTempo {
+  position: relative;
+  padding-left: 40px;
+}
+
+.lista {
+  display: grid;
+  gap: var(--e-7);
+  list-style: none;
+}
+
+.trilho {
+  position: absolute;
+  left: 7px;
+  top: 8px;
+  bottom: 8px;
+  width: 2px;
+  border-radius: 2px;
+  background: var(--linha);
+}
+
+.linha {
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  background: linear-gradient(180deg, var(--eletrico), var(--azul));
+  box-shadow: 0 0 12px rgba(0, 179, 255, 0.6);
+  transform-origin: top;
+}
+
+.item {
+  position: relative;
+  padding: var(--e-6);
+  border-radius: var(--r-g);
+  border: 1px solid var(--linha);
+  background: linear-gradient(180deg, rgba(14, 22, 44, 0.6), rgba(6, 10, 22, 0.6));
+  transition: border-color 0.35s, box-shadow 0.35s;
+}
+
+.item:hover {
+  border-color: var(--linha-forte);
+  box-shadow: 0 24px 48px -28px rgba(10, 91, 255, 0.7);
+}
+
+.marco {
+  position: absolute;
+  left: -40px;
+  top: 34px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  border: 2px solid var(--azul-claro);
+  background: var(--preto);
+  box-shadow: 0 0 0 5px rgba(10, 91, 255, 0.14);
+}
+
+.periodo {
+  font-size: 0.85rem;
+  color: var(--azul-claro);
+  font-variant-numeric: tabular-nums;
+}
+
+.cargo {
+  margin-top: var(--e-2);
+  font-size: clamp(1.4rem, 2.6vw, 1.9rem);
+  font-weight: 600;
+  letter-spacing: -0.03em;
+}
+
+.empresa {
+  margin-top: var(--e-1);
+  font-weight: 500;
+}
+
+.empresa span {
+  font-weight: 400;
+  color: var(--nevoa);
+}
+
+.realizacoes {
+  display: grid;
+  gap: var(--e-2);
+  margin-top: var(--e-5);
+  padding-left: 1.1em;
+  color: var(--nevoa);
+  font-size: 0.97rem;
+}
+
+.realizacoes li::marker {
+  color: var(--azul-claro);
+}
+
+@media (max-width: 900px) {
+  .layout {
+    grid-template-columns: 1fr;
+  }
+  .lateral {
+    position: static;
+  }
+}
+
+@media (max-width: 560px) {
+  .linhaTempo {
+    padding-left: 28px;
+  }
+  .marco {
+    left: -28px;
+  }
+  .trilho {
+    left: 1px;
+  }
+  .item {
+    padding: var(--e-5);
+  }
+}
